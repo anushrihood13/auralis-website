@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auralis - Create Account</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="register-page">
+
+  <div class="scene" aria-hidden="true">
+    <span class="shape shape-ring"></span>
+    <span class="shape shape-square"></span>
+    <span class="shape shape-triangle"></span>
+    <span class="shape shape-dot"></span>
+    <span class="shape shape-dot2"></span>
+  </div>
+
+  <div class="page">
+
+    <header class="top-bar">
+      <a class="logo" href="register.html">
+        <span class="logo-mark">
+          <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 2L27 9V21L15 28L3 21V9L15 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="15" cy="15" r="4.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-text">Auralis</span>
+      </a>
+
+      <a class="top-bar-link" href="index.html">
+        Already a member? <strong>Sign in</strong>
+      </a>
+    </header>
+
+    <main class="main">
+      <div class="register-card" id="registerCard">
+
+        <p class="eyebrow">Get started</p>
+        <h1 class="form-title">Create your account</h1>
+        <p class="form-subtitle">
+          Set up your workspace in under a minute.
+        </p>
+
+        <form id="registerForm" novalidate>
+
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName"
+              placeholder="Enter your full name" autocomplete="name">
+            <span class="error-msg" id="fullNameError"></span>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="regEmail">Email address</label>
+              <input type="email" id="regEmail" name="regEmail"
+                placeholder="you@example.com" autocomplete="email">
+              <span class="error-msg" id="regEmailError"></span>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone"
+                placeholder="Enter phone number" autocomplete="tel">
+              <span class="error-msg" id="phoneError"></span>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="regPassword">Password</label>
+              <div class="password-wrap">
+                <input type="password" id="regPassword" name="regPassword"
+                  placeholder="Create a password" autocomplete="new-password">
+                <button type="button" class="toggle-visibility"
+                  id="toggleRegPassword" aria-label="Show password">
+                  <svg class="icon-eye" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" stroke="currentColor" stroke-width="1.6"/>
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                  <svg class="icon-eye-off" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                    <path d="M3 3l18 18M10.6 10.6a3 3 0 0 0 4.24 4.24M6.6 6.7C3.9 8.4 2 12 2 12s4 7 11 7c1.9 0 3.6-.5 5-1.2M17.4 17.3C20 15.6 22 12 22 12s-1.4-2.5-3.9-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="error-msg" id="regPasswordError"></span>
+            </div>
+
+            <div class="field">
+              <label for="confirmPassword">Confirm password</label>
+              <div class="password-wrap">
+                <input type="password" id="confirmPassword" name="confirmPassword"
+                  placeholder="Repeat your password" autocomplete="new-password">
+                <button type="button" class="toggle-visibility"
+                  id="toggleConfirmPassword" aria-label="Show password">
+                  <svg class="icon-eye" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" stroke="currentColor" stroke-width="1.6"/>
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                  <svg class="icon-eye-off" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                    <path d="M3 3l18 18M10.6 10.6a3 3 0 0 0 4.24 4.24M6.6 6.7C3.9 8.4 2 12 2 12s4 7 11 7c1.9 0 3.6-.5 5-1.2M17.4 17.3C20 15.6 22 12 22 12s-1.4-2.5-3.9-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="error-msg" id="confirmPasswordError"></span>
+            </div>
+          </div>
+
+          <div class="strength-meter" id="strengthMeter" aria-hidden="true">
+            <span class="strength-bar"></span>
+            <span class="strength-bar"></span>
+            <span class="strength-bar"></span>
+          </div>
+          <p class="strength-label" id="strengthLabel"></p>
+
+          <label class="checkbox-wrap terms-wrap">
+            <input type="checkbox" id="terms" name="terms">
+            <span class="checkbox-box"></span>
+            <span>
+              I agree to the
+              <a href="#" class="inline-link">Terms of Service</a>
+              and
+              <a href="#" class="inline-link">Privacy Policy</a>
+            </span>
+          </label>
+          <span class="error-msg" id="termsError"></span>
+
+          <button type="submit" class="submit-btn" id="registerSubmit">
+            <span class="btn-label">Create account</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="success-msg" id="registerSuccess" role="status"></p>
+
+        </form>
+
+        <p class="switch-link">
+          Already have an account?
+          <a href="index.html">Sign in</a>
+        </p>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

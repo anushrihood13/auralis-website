@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auralis - Sign In</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+  <div class="page">
+
+    <section class="brand-panel" aria-hidden="false">
+
+      <div class="aurora">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+        <span class="blob blob-c"></span>
+      </div>
+
+      <div class="grid-overlay"></div>
+
+      <div class="brand-content">
+
+        <a class="logo" href="index.html">
+          <span class="logo-mark">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 2L27 9V21L15 28L3 21V9L15 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="15" cy="15" r="4.5" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="logo-text">Auralis</span>
+        </a>
+
+        <h1 class="brand-heading">
+          Your access panel<br>
+          to everything Auralis.
+        </h1>
+
+        <p class="brand-sub">
+          One secure identity across dashboards, billing, and your team workspace —
+          built for people who move fast.
+        </p>
+
+        <ul class="brand-stats" aria-label="Trust indicators">
+          <li>
+            <span class="stat-num">128k+</span>
+            <span class="stat-label">teams onboard</span>
+          </li>
+          <li>
+            <span class="stat-num">99.98%</span>
+            <span class="stat-label">uptime</span>
+          </li>
+          <li>
+            <span class="stat-num">SOC 2</span>
+            <span class="stat-label">certified</span>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-card" id="formCard">
+
+        <a class="logo logo-mobile" href="index.html">
+          <span class="logo-mark">
+            <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 2L27 9V21L15 28L3 21V9L15 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="15" cy="15" r="4.5" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="logo-text">Auralis</span>
+        </a>
+
+        <p class="eyebrow">Welcome back</p>
+        <h2 class="form-title">Sign in to your workspace</h2>
+        <p class="form-subtitle">
+          Enter your details below to continue where you left off.
+        </p>
+
+        <form id="loginForm" novalidate>
+
+          <div class="field">
+            <label for="loginEmail">Email address</label>
+            <input
+              type="email"
+              id="loginEmail"
+              name="loginEmail"
+              placeholder="you@company.com"
+              autocomplete="username"
+            >
+            <span class="error-msg" id="loginEmailError"></span>
+          </div>
+
+          <div class="field">
+            <label for="loginPassword">Password</label>
+
+            <div class="password-wrap">
+              <input
+                type="password"
+                id="loginPassword"
+                name="loginPassword"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+              >
+
+              <button
+                type="button"
+                class="toggle-visibility"
+                id="toggleLoginPassword"
+                aria-label="Show password"
+              >
+                <svg class="icon-eye" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+                <svg class="icon-eye-off" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                  <path d="M3 3l18 18M10.6 10.6a3 3 0 0 0 4.24 4.24M6.6 6.7C3.9 8.4 2 12 2 12s4 7 11 7c1.9 0 3.6-.5 5-1.2M17.4 17.3C20 15.6 22 12 22 12s-1.4-2.5-3.9-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <span class="error-msg" id="loginPasswordError"></span>
+          </div>
+
+          <div class="field-row">
+            <label class="checkbox-wrap">
+              <input type="checkbox" id="rememberMe" name="rememberMe">
+              <span class="checkbox-box"></span>
+              Remember me
+            </label>
+
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="submit-btn" id="loginSubmit">
+            <span class="btn-label">Sign in</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="success-msg" id="loginSuccess" role="status"></p>
+
+        </form>
+
+        <p class="switch-link">
+          Don't have an account?
+          <a href="register.html">Create one</a>
+        </p>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
